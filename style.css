@@ -1,0 +1,146 @@
+:root {
+  --main-bg-color: #274268;
+  --main-accent: #1fa1a1;
+  --ui-elements: #143140;
+  --text-color: #ffffff;
+}
+
+body,
+h1,
+h2,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(
+    to bottom,
+    var(--main-bg-color),
+    var(--ui-elements)
+  );
+  font-family: "Arial", sans-serif;
+}
+
+nav {
+  background-color: var(--main-bg-color) !important;
+  color: var(--main-accent) !important;
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav a {
+  color: var(--text-color) !important;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+h2 {
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+nav {
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav a:hover {
+  color: var(--main-accent) !important;
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 10px;
+  }
+
+  nav a {
+    margin: 0 10px;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .page-content {
+    max-width: 95%;
+    border-radius: 1rem;
+  }
+}
+
+.page-content {
+  max-width: 65%;
+  margin: 100px auto;
+  text-align: justify;
+}
+
+.page-content article {
+  margin-bottom: 40px;
+  background-color: var(--main-bg-color);
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.page-content article div.header img {
+  height: auto;
+  display: inline-block;
+  margin: 0 auto;
+  max-width: 30%;
+}
+
+.page-content article div.header {
+  font-size: 1.5em;
+  display: inline-block;
+  margin-bottom: 30px;
+  background-color: var(--main-accent);
+}
+
+div.header {
+  opacity: 0.9;
+}
+
+.page-content article div.header h2 {
+  display: contents;
+  color: var(--ui-elements);
+}
+
+.page-content article p {
+  color: var(--text-color);
+  opacity: 0.8;
+  padding: 10px 10px 10px 10px;
+}
+
+article:not(:last-child) {
+  padding-bottom: 20px;
+}
+
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  height: 100vh;
+  background: url("pictures/dolphinJump.gif") center center;
+  background-size: cover;
+  opacity: 0.75;
+}
+
+.main-content article {
+  text-align: center;
+  color: var(--text-color);
+  background-color: var(--main-bg-color);
+  border-radius: 15px;
+  padding: 30px;
+  opacity: 0.6;
+}
+
+.main-content article h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
