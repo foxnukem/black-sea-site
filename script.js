@@ -19,17 +19,3 @@ function showPage(title) {
     pageToShow.style.display = "";
   }
 }
-
-async function getFileContentAsText(file) {
-  const response = await fetch(file);
-  const fileContent = await response.text();
-  return fileContent;
-}
-
-async function insertContentsFromFiles() {
-  const tbl = document.querySelectorAll("[data-src]");
-  for (let i = 0; i < tbl.length; i++)
-    tbl[i].innerHTML = await getFileContentAsText(tbl[i].dataset.src);
-}
-
-insertContentsFromFiles();
